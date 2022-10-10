@@ -41,6 +41,8 @@ function Login() {
 			<input type="password" name="password" value={regValues.password} onChange={handleChange} placeholder="Password" />
             <br></br>
 			<button>Register</button>
+			<br></br>
+           		<a href="/students" className="list-tab"><i className="fa fa-sign-out"></i> Back to Dashboard</a>
 		</form>
 	</div>
 	<div className="overlay-container">
