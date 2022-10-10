@@ -1,8 +1,6 @@
 import React ,{useState,useEffect} from 'react';
 import axios from 'axios';
 import Moment from 'react-moment';
-
-
 import './style.css';
 
 function Dashboard() {
@@ -11,11 +9,9 @@ function Dashboard() {
 
     useEffect(() => {
             axios.post("http://44.204.12.25:3200/api/v1/students/list").then((response) => {
-                //setStudents(response.data);
                 setTotal(response.data.data[0].total);
                 setStudents(response.data.data[0].result);
                 console.log(response.data.data[0].result);
-               // console.log(response.data[0].total);
             });
     }, []);
 
@@ -79,13 +75,13 @@ function Dashboard() {
                             </div>
                             <div className="table-data-structure">
                             {students &&
-                students.map(({ username,_id,password,createdAt,expiredAt }) => (
+                students.map(({ username,userId,password,createdAt,expiredAt }) => (
                                 <div className="table-data row">
                                 
-                                    <div className="col-md-2">
-                                        <h6 className="td-title">{_id}</h6>
+                                    <div className="col-md-1">
+                                        <h6 className="td-title">{userId}</h6>
                                     </div>
-                                    <div className="col-md-3">
+                                    <div className="col-md-4">
                                         <h6 className="td-title">{username}</h6>
                                     </div>
                                     <div className="col-md-3">

@@ -46,6 +46,7 @@ function Login() {
 	<div className="overlay-container">
 		<div className="overlay">
 			<div className="overlay-panel overlay-right">
+                <img src="https://img.freepik.com/free-vector/seminar-concept-illustration_114360-7855.jpg" className='imageCls'/>
 				<h1>Ridhima</h1>
 				<p>To keep connected with us please login with ridhima</p>
 			</div>

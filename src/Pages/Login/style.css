@@ -1,10 +1,13 @@
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 * {
 	box-sizing: border-box;
 }
-
+.imageCls{
+    height: 200px;
+    padding-bottom: 30px;
+    border-radius: 26px;
+}
 .loginpanel {
 	background: #f6f5f7;
 	display: flex;
