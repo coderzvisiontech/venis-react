@@ -1,10 +1,13 @@
-import React ,{useState} from 'react'
+import React ,{useState} from 'react';
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 import './style.css'; 
 
 
 function Login() {
     const initialvalues = {username:"", password:""}
     const [regValues, setRegValues] = useState(initialvalues);
+    const navigate = useNavigate();
     const handleChange = (e) =>{
         const{name,value} = e.target;
         setRegValues({...regValues, [name]:value});
@@ -13,6 +16,18 @@ function Login() {
     const onSubmit = (e) => {
         e.preventDefault();
         console.log(regValues);
+        const user = {
+            username: regValues.username,
+            password: regValues.password
+          };
+      
+          axios.post('http://44.204.12.25:3200/api/v1/students/', user)
+            .then(res => {
+              console.log(res);
+              console.log(res.data.message);
+            })
+        navigate("/students");
+
     }
   return (
     <div className='loginpanel'>

@@ -1,7 +1,24 @@
-import React from 'react'
+import React ,{useState,useEffect} from 'react';
+import axios from 'axios';
+import Moment from 'react-moment';
+
+
 import './style.css';
 
 function Dashboard() {
+    const [students,setStudents]=useState();
+    const [total,setTotal]=useState();
+
+    useEffect(() => {
+            axios.post("http://44.204.12.25:3200/api/v1/students/list").then((response) => {
+                //setStudents(response.data);
+                setTotal(response.data.data[0].total);
+                setStudents(response.data.data[0].result);
+                console.log(response.data.data[0].result);
+               // console.log(response.data[0].total);
+            });
+    }, []);
+
   return (
     <div>
     <section>
@@ -31,7 +48,7 @@ function Dashboard() {
                                 <div className="records-list">
                                     <div className="records-list-inner d-flex">
                                         <div className="rc-wrapper">
-                                            <h4>Total Students <span className="count-students">258</span></h4>
+                                            <h4>Total Students <span className="count-students">{total}</span></h4>
                                         </div>
                                         <div className="form-group has-search">
                                             <input type="text" className="form-control" placeholder="Search" />
@@ -61,25 +78,27 @@ function Dashboard() {
                                 </div>
                             </div>
                             <div className="table-data-structure">
-                               
+                            {students &&
+                students.map(({ username,_id,password,createdAt,expiredAt }) => (
                                 <div className="table-data row">
-                                    <div className="col-md-1">
-                                        <h6 className="td-title">1</h6>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <h6 className="td-title">Vansabadhok</h6>
+                                
+                                    <div className="col-md-2">
+                                        <h6 className="td-title">{_id}</h6>
                                     </div>
                                     <div className="col-md-3">
-                                        <span className="d-block td-pass">vansh@4577</span>
+                                        <h6 className="td-title">{username}</h6>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <span className="d-block td-pass">{password}</span>
                                     </div>
                                     <div className="col-md-2">
-                                        <span className="d-block td-cdate">05/10/2022</span>
+                                        <span className="d-block td-cdate"><Moment format='DD/MM/YYYY'>{createdAt}</Moment></span>
                                     </div>
                                     <div className="col-md-2">
-                                        <span className="d-block td-edate">05/11/2022</span>
+                                        <span className="d-block td-edate"><Moment format='DD/MM/YYYY'>{expiredAt}</Moment></span>
                                     </div>
                                 </div>
-                                
+                                ))}
                             </div>
                         </div>
                     </div>
