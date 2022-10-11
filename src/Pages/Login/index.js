@@ -45,7 +45,6 @@ function Login() {
 			<input type="text" name="username" value={loginValues.username} onChange={handleChange} placeholder="Username" />
 			<input type="password" name="password" value={loginValues.password} onChange={handleChange} placeholder="Password" />
       {isLogin ? <span className='error-message'>Invalid Credentials</span> : null}
-      
             <br></br>
 			<button>Login</button>
             <br></br>
