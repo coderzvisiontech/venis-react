@@ -9,9 +9,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Register from './Pages/Register';
+import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
-import Dashboard from './Pages/Dashboard'
-
+import Mock from './Pages/Mock';
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
       <BrowserRouter>
           <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/students" element={<Dashboard />} />
+          <Route path="/mock" element={<Mock />} />
         </Routes>
       </BrowserRouter>
     </div>

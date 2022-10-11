@@ -3,10 +3,6 @@
 * {
 	box-sizing: border-box;
 }
-.error-message{
-	color: red;
-	font-size: 14px;
-}
 .imageCls{
     height: 200px;
     padding-bottom: 30px;

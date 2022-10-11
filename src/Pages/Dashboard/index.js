@@ -2,6 +2,7 @@ import React ,{useState,useEffect} from 'react';
 import axios from 'axios';
 import Moment from 'react-moment';
 import './style.css';
+import LogoImage from '../../imgSrc'
 
 function Dashboard() {
     const [students,setStudents]=useState();
@@ -36,7 +37,7 @@ function Dashboard() {
                         <div className="records-headline d-flex flex-wrap justify-content-between">
                             <h3>Students</h3>   
                             <div className="button-wrapper">
-                                <a href="/login" className="purple-btn">+ Add Students</a>
+                                <a href="/register" className="purple-btn">+ Add Students</a>
                             </div>
                         </div>
                         <div className="record-list-wrapper">

@@ -1,4 +1,4 @@
-import loginBannerImg from 'Assets/images/login.jpg';
+import logoImage from './Assets/images/login.png';
 
 
-export { loginBannerImg };
+export default logoImage;

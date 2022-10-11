@@ -1,0 +1,212 @@
+section{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+    line-height: 1.5;
+    min-height: 100vh;
+    background: #F9F9F9;
+}
+a{
+    text-decoration: none;
+}
+.tr-wrapper {background: #F9F9F9;}
+.tr-row-inner{
+    min-height: 100vh;
+}
+.login-uname img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.tab-list-wrapper {
+    display: flex;
+}
+.tab-list-inner {
+    background: #FFFFFF;
+    border: 1px solid #EFF0F6;
+    border-radius: 20px;
+    width: 100%;
+    padding: 50px 30px;
+}
+a.list-tab {
+    display: block;
+    color: #4D4D4D;
+    padding: 10px 16px;
+    text-decoration: none;
+    margin: 2px 0;
+}
+
+a.list-tab.active-tab {
+    background: rgba(93, 95, 239, 0.1);
+    border-radius: 10px;
+    color: #5D5FEF;
+    font-weight: 500;
+}
+
+a.list-tab i {
+    margin-right: 10px;
+}
+
+a.list-tab:hover {
+    background: rgba(93, 95, 239, 0.1);
+    border-radius: 10px;
+    color: #5D5FEF;
+    font-weight: 500;
+}
+a.purple-btn {
+    background: #5D5FEF;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    display: inline-block;
+    min-width: 120px;
+    text-align: center;
+}
+a.purple-btn:hover {
+    color: #5D5FEF;
+    background: #fff;
+}
+.tab-records-inner {
+    padding: 35px;
+    padding-left: 0;
+}
+.records-headline h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.records-headline {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 26px;
+}
+.mockboard h6.td-title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: left;
+}
+.record-list-wrapper {
+    background: #FFFFFF;
+    border: 1px solid #EFF0F6;
+    border-radius: 20px;
+    margin-top: 18px;
+}
+.table-data{
+    margin: 0;
+    border-bottom: 1px solid #F4F5F7;
+    padding: 14px;
+}
+.table-data span {
+    color: #70768C;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: -0.154px;
+}
+h5.column-title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.02px;
+    color: #4F5E74;
+    background: #EFF0F6;
+    opacity: 0.5;
+    border-radius: 7px;
+    text-align: center;
+    padding: 10px 34px;
+    text-transform: uppercase;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 220px;
+}
+.record-filters {
+    padding: 26px;
+    padding-bottom: 15px;
+}
+.records-list-inner {
+    position: relative;
+}
+.records-list {border-bottom: 1px solid #F4F5F7;margin-bottom: 25px;padding-bottom: 20px;}
+a.rc-minus-icon {
+    background: #EFF0F6;
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 32px;
+    line-height: 1.1;
+    color: #000;
+}
+.rc-wrapper h4 {
+    margin: 0;
+    margin-right: 40px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 22px;
+/* identical to box height, or 129% */
+    color: #2F2F2F;
+}
+
+.rc-wrapper h4 span {
+    color: rgba(47, 47, 47, 0.4);
+    margin-left: 5px;
+}
+input.form-control {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.154px;
+    color: rgba(0, 0, 0, 0.5);
+    border: 0;
+    outline: 0;
+    padding: 6px;
+}
+span.fa.fa-search.form-control-feedback {
+    font-size: 18px;
+}
+.table-header .col-md-3:nth-child(1) h5 {
+    justify-content: center;
+    margin-left: 0;
+}
+.mt-table {
+    align-items: center;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.mock-tests-records {
+    padding: 0 30px;
+    margin-top: 20px;
+}
+
+.mt-table h6 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.mt-table.table-data {
+    padding: 15px 20px;
+}
+.action-btn-col {
+    display: flex;
+    justify-content: flex-end;
+}
+.action-btn-col a {
+    margin: 0 6px;
+}
+
+.mt-action-col h3 {
+    text-align: right;
+    padding-right: 20px;
+}
+
+h3.mt-title {
+    font-size: 24px;
+}

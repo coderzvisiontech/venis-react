@@ -4,34 +4,29 @@ import { useNavigate } from "react-router-dom";
 import './style.css'; 
 
 
-function Login() {
+function Register() {
     const initialvalues = {username:"", password:""}
-    const [loginValues, setLoginValues] = useState(initialvalues);
-    const [isLogin, setIsLogin] = useState(false);
+    const [regValues, setRegValues] = useState(initialvalues);
     const navigate = useNavigate();
     const handleChange = (e) =>{
         const{name,value} = e.target;
-        setLoginValues({...loginValues, [name]:value});
+        setRegValues({...regValues, [name]:value});
     }
 
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log(loginValues);
+        console.log(regValues);
         const user = {
-            username: loginValues.username,
-            password: loginValues.password
+            username: regValues.username,
+            password: regValues.password
           };
       
-          axios.post('http://44.204.12.25:3200/api/v1/students/login', user)
+          axios.post('http://44.204.12.25:3200/api/v1/students/', user)
             .then(res => {
               console.log(res);
-              setIsLogin(false);
-              navigate("/mock");
-
-            }).catch(error => {
-              console.log(error);
-              setIsLogin(true);
-            });
+              console.log(res.data.message);
+            })
+        navigate("/students");
 
     }
   return (
@@ -40,15 +35,14 @@ function Login() {
 
 	<div className="form-container sign-in-container">
 		<form onSubmit={onSubmit}>
-			<h2>Login Form</h2>
+			<h2>Registration Form</h2>
 				<br></br>
-			<input type="text" name="username" value={loginValues.username} onChange={handleChange} placeholder="Username" />
-			<input type="password" name="password" value={loginValues.password} onChange={handleChange} placeholder="Password" />
-      {isLogin ? <span className='error-message'>Invalid Credentials</span> : null}
-      
+			<input type="text" name="username" value={regValues.username} onChange={handleChange} placeholder="Username" />
+			<input type="password" name="password" value={regValues.password} onChange={handleChange} placeholder="Password" />
             <br></br>
-			<button>Login</button>
+			<button>Register</button>
             <br></br>
+            <a href="/students" className="list-tab"><i className="fa fa-sign-out"></i> Back to Dashboard</a>
 		</form>
 	</div>
 	<div className="overlay-container">
@@ -65,4 +59,4 @@ function Login() {
       );
     }
 
-export default Login
+export default Register
